@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAGUETTEDOGE - $BAGUETTE</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', sans-serif;
+      background: #fffbe6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+    header {
+      background: #f7d794;
+      padding: 2rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+    .hero-img {
+      width: 250px;
+      border-radius: 20px;
+      margin-top: 1rem;
+    }
+    section {
+      padding: 2rem;
+    }
+    .button {
+      background: #ffaf40;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #ff8f00;
+    }
+    footer {
+      background: #eee;
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+    li {
+      margin: 0.5rem 0;
+    }
+    #priceChart {
+      max-width: 600px;
+      margin: 2rem auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Le Doge, but French</h1>
+    <p>BAGUETTEDOGE ($BAGUETTE) — The meme coin with flavor</p>
+    <img src="https://images.openai.com/image/210ed5e0-c640-4d5d-b3ff-3b785845e3d8" alt="Baguette Doge" class="hero-img" />
+  </header>
+  <section>
+    <h2>What is $BAGUETTE?</h2>
+    <p>The first French Doge meme coin on Solana. He's tasty, he's toasty, and he's ready to moon. Mangez des gains!</p>
+  </section>
+  <section>
+    <h2>Tokenomics</h2>
+    <ul>
+      <li>1,000,000,000 Total Supply</li>
+      <li>100% launched via Pump.fun (no presale)</li>
+      <li>Zero taxes, zero team allocation</li>
+      <li>100% community driven</li>
+      <li>Liquidity locked onchain via Pump.fun bonding curve</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Price Chart</h2>
+    <canvas id="priceChart"></canvas>
+  </section>
+  <section>
+    <h2>Buy Now on Pump.fun</h2>
+    <a href="https://pump.fun/" class="button" target="_blank">Get $BAGUETTE</a>
+  </section>
+  <footer>
+    <p>&copy; 2025 BaguetteDoge. All memes reserved.</p>
+  </footer>
+  <script>
+    const ctx = document.getElementById('priceChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['Start', 'Hour 1', 'Hour 2', 'Hour 3', 'Hour 4'],
+        datasets: [{
+          label: '$BAGUETTE Price (Mock Data)',
+          data: [0.0001, 0.0008, 0.0012, 0.0025, 0.0042],
+          backgroundColor: 'rgba(255, 175, 64, 0.2)',
+          borderColor: '#ffaf40',
+          borderWidth: 2,
+          tension: 0.3,
+          fill: true
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
